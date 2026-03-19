@@ -3,570 +3,617 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kit N/A — Award-Winning Non-Alcoholic Craft Beer</title>
+  <title>KIT Non-Alc — Award-Winning Non-Alcoholic Craft Beer</title>
   <meta name="description" content="Award-winning non-alcoholic craft beer made with just 4 simple ingredients. Gluten-removed, vegan, crushable. Shop Kit N/A on Amazon." />
 
-  <!-- Fonts -->
+  <!-- Brand Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     /* ── Reset & Base ─────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      --green:      #2D5016;
-      --green-mid:  #3D6B1F;
-      --green-lt:   #5A8A33;
-      --cream:      #F7F3EC;
-      --cream-dk:   #EDE7DA;
-      --gold:       #C8952A;
-      --gold-lt:    #E8B84B;
-      --charcoal:   #1C1C1E;
-      --gray:       #6B7280;
-      --gray-lt:    #9CA3AF;
+      --blue:       #0090DA;
+      --blue-dk:    #006faa;
+      --coral:      #E96B58;
+      --coral-dk:   #c9503d;
+      --yellow:     #FFBF3F;
+      --yellow-dk:  #e0a020;
+      --black:      #000000;
       --white:      #FFFFFF;
-      --radius:     12px;
-      --shadow:     0 4px 24px rgba(0,0,0,0.10);
-      --shadow-lg:  0 12px 48px rgba(0,0,0,0.15);
+      --off-white:  #F5F5F2;
+      --gray-lt:    #F0F0EE;
+      --gray:       #6B6B6B;
+      --gray-dk:    #333333;
+      --radius:     8px;
+      --radius-lg:  16px;
+      --shadow:     0 4px 20px rgba(0,0,0,0.10);
+      --shadow-lg:  0 12px 48px rgba(0,0,0,0.18);
     }
+
     html { scroll-behavior: smooth; }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--cream);
-      color: var(--charcoal);
+      font-family: 'Instrument Sans', sans-serif;
+      background: var(--white);
+      color: var(--black);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
     }
-    img { display: block; max-width: 100%; }
-    a { text-decoration: none; color: inherit; }
 
-    /* ── Utility ──────────────────────────────────────────── */
-    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
-    .section    { padding: 80px 0; }
-    .section-sm { padding: 48px 0; }
-    .text-center { text-align: center; }
-    .badge {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--white);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .08em;
+    img { display: block; max-width: 100%; height: auto; }
+    a   { text-decoration: none; color: inherit; }
+
+    /* ── Typography ───────────────────────────────────────── */
+    h1, h2, h3, h4 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600;
       text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: 100px;
+      letter-spacing: .03em;
+      line-height: 1.05;
     }
-    .badge-outline {
-      background: transparent;
-      border: 1.5px solid var(--green);
-      color: var(--green);
+
+    /* ── Layout ───────────────────────────────────────────── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+    .section    { padding: 88px 0; }
+    .section-sm { padding: 56px 0; }
+    .text-center { text-align: center; }
+
+    /* ── Section Labels ───────────────────────────────────── */
+    .eyebrow {
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 14px;
+      display: block;
     }
+    .section-title {
+      font-size: clamp(32px, 4.5vw, 52px);
+      margin-bottom: 18px;
+      color: var(--black);
+    }
+    .section-sub {
+      font-size: 17px;
+      color: var(--gray);
+      line-height: 1.75;
+      max-width: 580px;
+    }
+    .section-sub.centered { margin: 0 auto; }
 
     /* ── Buttons ──────────────────────────────────────────── */
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      font-family: 'Inter', sans-serif;
+      gap: 9px;
+      font-family: 'Oswald', sans-serif;
       font-size: 15px;
-      font-weight: 700;
-      letter-spacing: .02em;
-      padding: 16px 32px;
-      border-radius: 100px;
-      border: none;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: 15px 30px;
+      border-radius: 4px;
+      border: 2px solid transparent;
       cursor: pointer;
-      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
       white-space: nowrap;
     }
     .btn:hover  { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
-    .btn:active { transform: translateY(0); }
-    .btn-primary {
-      background: var(--gold);
-      color: var(--white);
-    }
-    .btn-primary:hover { background: #b8841f; }
-    .btn-dark {
-      background: var(--charcoal);
-      color: var(--white);
-    }
-    .btn-outline {
+    .btn:active { transform: translateY(0); box-shadow: none; }
+
+    .btn-blue   { background: var(--blue);   color: var(--white); border-color: var(--blue); }
+    .btn-blue:hover { background: var(--blue-dk); border-color: var(--blue-dk); }
+
+    .btn-coral  { background: var(--coral);  color: var(--white); border-color: var(--coral); }
+    .btn-coral:hover { background: var(--coral-dk); border-color: var(--coral-dk); }
+
+    .btn-yellow { background: var(--yellow); color: var(--black); border-color: var(--yellow); }
+    .btn-yellow:hover { background: var(--yellow-dk); border-color: var(--yellow-dk); }
+
+    .btn-outline-white {
       background: transparent;
-      border: 2px solid var(--charcoal);
-      color: var(--charcoal);
+      color: var(--white);
+      border-color: var(--white);
     }
-    .btn-outline:hover { background: var(--charcoal); color: var(--white); }
-    .btn-lg { font-size: 17px; padding: 20px 40px; }
-    .btn-sm { font-size: 13px; padding: 12px 24px; }
+    .btn-outline-white:hover { background: var(--white); color: var(--black); }
 
-    .amazon-icon {
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
+    .btn-outline-black {
+      background: transparent;
+      color: var(--black);
+      border-color: var(--black);
+    }
+    .btn-outline-black:hover { background: var(--black); color: var(--white); }
+
+    .btn-lg { font-size: 17px; padding: 18px 38px; }
+    .btn-sm { font-size: 13px; padding: 11px 22px; }
+
+    .amz-icon {
+      width: 19px; height: 19px; flex-shrink: 0;
     }
 
-    /* ── Sticky Nav ───────────────────────────────────────── */
+    /* ── Announcement Bar ─────────────────────────────────── */
+    .announcement {
+      background: var(--yellow);
+      text-align: center;
+      padding: 11px 24px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+    .announcement a { text-decoration: underline; color: var(--black); }
+
+    /* ── Nav ─────────────────────────────────────────────── */
     .nav {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: var(--green);
-      padding: 14px 0;
-      box-shadow: 0 2px 16px rgba(0,0,0,.2);
+      z-index: 200;
+      background: var(--black);
+      padding: 0 0;
     }
     .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      height: 64px;
       gap: 16px;
     }
-    .nav-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      font-weight: 800;
-      color: var(--white);
-      letter-spacing: .04em;
+    .nav-logo img {
+      height: 36px;
+      width: auto;
     }
-    .nav-logo span { color: var(--gold-lt); }
-    .nav-cta { font-size: 14px; padding: 10px 24px; }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.75);
+      transition: color .15s;
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { font-size: 13px; padding: 11px 22px; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+    }
 
     /* ── Hero ─────────────────────────────────────────────── */
     .hero {
-      background: linear-gradient(145deg, var(--green) 0%, var(--green-mid) 60%, #2a5c12 100%);
-      padding: 80px 0 60px;
-      overflow: hidden;
       position: relative;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      position: relative;
-      z-index: 1;
-    }
-    .hero-eyebrow {
+      min-height: 88vh;
       display: flex;
       align-items: center;
+      overflow: hidden;
+      background: var(--black);
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://kit-na-brewing.myshopify.com/cdn/shop/files/Shopify_lander_tailgate_8c9ec41a-7a14-48b2-b801-4c811bac25b2.jpg?v=1759240923&width=2000');
+      background-size: cover;
+      background-position: center top;
+      opacity: .45;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(0,0,0,.75) 0%, rgba(0,0,0,.3) 60%, rgba(0,0,0,0) 100%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 100px 0 80px;
+      max-width: 640px;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
       gap: 12px;
-      margin-bottom: 20px;
-    }
-    .hero-eyebrow-text {
-      color: var(--gold-lt);
-      font-size: 13px;
+      background: var(--yellow);
+      color: var(--black);
+      font-family: 'Oswald', sans-serif;
+      font-size: 12px;
       font-weight: 600;
-      letter-spacing: .12em;
+      letter-spacing: .16em;
       text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 2px;
+      margin-bottom: 24px;
     }
-    .hero-divider { width: 32px; height: 2px; background: var(--gold-lt); }
     .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(38px, 5vw, 62px);
-      font-weight: 800;
-      line-height: 1.1;
+      font-size: clamp(48px, 7vw, 84px);
       color: var(--white);
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+      line-height: .98;
     }
-    .hero h1 em {
-      font-style: normal;
-      color: var(--gold-lt);
-    }
+    .hero h1 .accent { color: var(--yellow); }
     .hero-sub {
       font-size: 18px;
-      color: rgba(255,255,255,.80);
-      margin-bottom: 32px;
-      max-width: 480px;
+      color: rgba(255,255,255,.82);
+      margin-bottom: 36px;
+      max-width: 500px;
       line-height: 1.65;
     }
-    .hero-ctas {
+    .hero-btns {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-bottom: 40px;
+      margin-bottom: 48px;
     }
     .hero-stats {
       display: flex;
-      gap: 32px;
+      gap: 0;
+      border-top: 1px solid rgba(255,255,255,.2);
+      padding-top: 28px;
     }
-    .hero-stat { border-left: 2px solid var(--gold-lt); padding-left: 14px; }
+    .hero-stat {
+      padding: 0 28px 0 0;
+      margin-right: 28px;
+      border-right: 1px solid rgba(255,255,255,.2);
+    }
+    .hero-stat:last-child { border-right: none; }
     .hero-stat-num {
-      font-size: 26px;
-      font-weight: 800;
-      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--yellow);
       line-height: 1;
     }
     .hero-stat-label {
       font-size: 12px;
-      color: rgba(255,255,255,.65);
+      color: rgba(255,255,255,.6);
+      text-transform: uppercase;
+      letter-spacing: .08em;
       margin-top: 4px;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-    }
-    .hero-visual {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-    .hero-cans {
-      display: flex;
-      gap: -20px;
-      align-items: flex-end;
-      justify-content: center;
-      position: relative;
-    }
-    /* SVG Can Illustrations */
-    .can-wrap {
-      position: relative;
-      transition: transform .3s ease;
-      filter: drop-shadow(0 20px 40px rgba(0,0,0,.35));
-    }
-    .can-wrap:hover { transform: translateY(-8px) scale(1.04); }
-    .can-wrap:nth-child(1) { transform: rotate(-8deg) translateX(20px); z-index: 1; }
-    .can-wrap:nth-child(2) { transform: translateY(-20px); z-index: 3; }
-    .can-wrap:nth-child(3) { transform: rotate(8deg) translateX(-20px); z-index: 2; }
-    .can-wrap:nth-child(1):hover { transform: rotate(-8deg) translateX(20px) translateY(-8px); }
-    .can-wrap:nth-child(3):hover { transform: rotate(8deg) translateX(-20px) translateY(-8px); }
-
-    /* Award badge floating */
-    .hero-award {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: var(--gold);
-      color: var(--white);
-      border-radius: 50%;
-      width: 90px;
-      height: 90px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-size: 9px;
-      font-weight: 800;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      box-shadow: 0 8px 24px rgba(200,149,42,.5);
-      animation: float 3s ease-in-out infinite;
-    }
-    .hero-award-icon { font-size: 20px; margin-bottom: 2px; }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50%       { transform: translateY(-8px); }
     }
 
-    /* ── Social Proof Bar ─────────────────────────────────── */
-    .proof-bar {
-      background: var(--charcoal);
-      padding: 18px 0;
+    /* ── Trust Bar ────────────────────────────────────────── */
+    .trust-bar {
+      background: var(--blue);
+      padding: 0;
     }
-    .proof-bar-inner {
+    .trust-bar-inner {
       display: flex;
-      align-items: center;
+      align-items: stretch;
       justify-content: center;
-      gap: 40px;
       flex-wrap: wrap;
     }
-    .proof-item {
+    .trust-item {
       display: flex;
       align-items: center;
       gap: 10px;
-      color: rgba(255,255,255,.85);
-      font-size: 14px;
+      padding: 18px 28px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 13px;
       font-weight: 500;
-    }
-    .proof-icon { font-size: 18px; }
-    .proof-divider {
-      width: 1px;
-      height: 20px;
-      background: rgba(255,255,255,.2);
-    }
-
-    /* ── Stars ────────────────────────────────────────────── */
-    .stars { color: var(--gold); font-size: 18px; letter-spacing: 2px; }
-
-    /* ── Section Headers ──────────────────────────────────── */
-    .section-label {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .14em;
+      letter-spacing: .1em;
       text-transform: uppercase;
-      color: var(--green-lt);
-      margin-bottom: 12px;
+      color: var(--white);
+      border-right: 1px solid rgba(255,255,255,.2);
     }
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(28px, 4vw, 44px);
-      font-weight: 800;
-      line-height: 1.15;
-      color: var(--charcoal);
-      margin-bottom: 16px;
-    }
-    .section-sub {
-      font-size: 17px;
-      color: var(--gray);
-      max-width: 560px;
-      margin: 0 auto;
-      line-height: 1.7;
-    }
+    .trust-item:last-child { border-right: none; }
+    .trust-item-icon { font-size: 18px; }
 
     /* ── Products ─────────────────────────────────────────── */
-    .products { background: var(--white); }
+    .products { background: var(--off-white); }
+    .products-header { margin-bottom: 56px; }
     .products-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      margin-top: 56px;
+      gap: 24px;
     }
     .product-card {
-      border-radius: var(--radius);
+      background: var(--white);
+      border-radius: var(--radius-lg);
       overflow: hidden;
-      border: 1.5px solid var(--cream-dk);
-      transition: transform .25s ease, box-shadow .25s ease;
-      background: var(--cream);
       display: flex;
       flex-direction: column;
+      transition: transform .25s ease, box-shadow .25s ease;
+      border: 1px solid rgba(0,0,0,.06);
     }
     .product-card:hover {
       transform: translateY(-6px);
       box-shadow: var(--shadow-lg);
     }
-    .product-card-visual {
-      padding: 36px 24px 0;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      min-height: 220px;
+    .product-card-img {
       position: relative;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: var(--gray-lt);
     }
-    .product-card-bg {
+    .product-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease;
+    }
+    .product-card:hover .product-card-img img {
+      transform: scale(1.04);
+    }
+    .product-card-badge {
       position: absolute;
-      inset: 0;
-      border-radius: var(--radius) var(--radius) 0 0;
-      opacity: .15;
+      top: 14px;
+      left: 14px;
+      background: var(--yellow);
+      color: var(--black);
+      font-family: 'Oswald', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 2px;
     }
-    .card-can {
-      position: relative;
-      z-index: 1;
-      filter: drop-shadow(0 12px 24px rgba(0,0,0,.2));
-      transition: transform .3s ease;
-    }
-    .product-card:hover .card-can { transform: translateY(-6px) scale(1.04); }
     .product-card-body {
-      padding: 24px;
+      padding: 28px;
       flex: 1;
       display: flex;
       flex-direction: column;
     }
-    .product-card-tag {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .1em;
+    .product-type {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .12em;
       text-transform: uppercase;
-      color: var(--gray);
-      margin-bottom: 6px;
+      color: var(--blue);
+      margin-bottom: 8px;
     }
-    .product-card-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--charcoal);
-      margin-bottom: 12px;
+    .product-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      color: var(--black);
+      margin-bottom: 14px;
+      line-height: 1.1;
     }
-    .product-card-desc {
+    .product-desc {
       font-size: 14px;
       color: var(--gray);
-      line-height: 1.65;
-      margin-bottom: 16px;
+      line-height: 1.7;
+      margin-bottom: 18px;
       flex: 1;
     }
-    .flavor-tags {
+    .flavor-pills {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
-    .flavor-tag {
+    .flavor-pill {
       font-size: 12px;
-      padding: 4px 10px;
-      border-radius: 100px;
-      background: var(--cream-dk);
-      color: var(--green);
       font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 100px;
+      background: var(--gray-lt);
+      color: var(--gray-dk);
     }
-    .product-card-award {
+    .product-card .btn { justify-content: center; }
+
+    /* Variety callout */
+    .variety-callout {
+      margin-top: 40px;
+      background: var(--black);
+      border-radius: var(--radius-lg);
+      padding: 36px 40px;
       display: flex;
       align-items: center;
-      gap: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      color: var(--gold);
+      justify-content: space-between;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .variety-callout-img {
+      width: 200px;
+      border-radius: var(--radius);
+      flex-shrink: 0;
+    }
+    .variety-callout-text h3 {
+      font-size: 28px;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+    .variety-callout-text p {
+      font-size: 15px;
+      color: rgba(255,255,255,.65);
+      max-width: 400px;
+      line-height: 1.65;
       margin-bottom: 20px;
     }
-    .product-card .btn { width: 100%; justify-content: center; }
 
-    /* ── Why Kit N/A ──────────────────────────────────────── */
-    .why { background: var(--cream); }
+    /* ── Why Section ──────────────────────────────────────── */
+    .why { background: var(--white); }
     .why-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      gap: 100px;
       align-items: center;
-      margin-top: 0;
     }
+    .why-img-wrap {
+      position: relative;
+    }
+    .why-img-main {
+      width: 100%;
+      border-radius: var(--radius-lg);
+      object-fit: cover;
+      aspect-ratio: 4/5;
+    }
+    .why-img-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--yellow);
+      color: var(--black);
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: 'Oswald', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      line-height: 1.3;
+      box-shadow: var(--shadow-lg);
+    }
+    .why-img-badge-num { font-size: 26px; line-height: 1; margin-bottom: 2px; }
     .why-features {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      gap: 20px;
+      margin-top: 32px;
     }
     .why-feature {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 24px;
-      border: 1.5px solid var(--cream-dk);
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-    .why-feature:hover {
-      transform: translateY(-3px);
-      box-shadow: var(--shadow);
-    }
-    .why-feature-icon {
-      font-size: 28px;
-      margin-bottom: 12px;
+      border-left: 3px solid var(--blue);
+      padding: 4px 0 4px 16px;
     }
     .why-feature-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--charcoal);
-      margin-bottom: 6px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--black);
+      margin-bottom: 4px;
     }
     .why-feature-desc {
       font-size: 13px;
       color: var(--gray);
       line-height: 1.6;
     }
-    .why-text .section-sub { margin: 0; text-align: left; max-width: 420px; }
 
     /* ── Ingredients ──────────────────────────────────────── */
-    .ingredients { background: var(--green); }
-    .ingredients .section-label { color: var(--gold-lt); }
+    .ingredients { background: var(--black); color: var(--white); }
+    .ingredients .eyebrow { color: var(--yellow); }
     .ingredients .section-title { color: var(--white); }
-    .ingredients .section-sub { color: rgba(255,255,255,.75); }
+    .ingredients .section-sub { color: rgba(255,255,255,.65); }
     .ingredients-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      margin-top: 56px;
+      gap: 1px;
+      background: rgba(255,255,255,.1);
+      margin-top: 60px;
+      border: 1px solid rgba(255,255,255,.1);
     }
-    .ingredient-card {
-      background: rgba(255,255,255,.08);
-      border: 1px solid rgba(255,255,255,.15);
-      border-radius: var(--radius);
-      padding: 32px 20px;
+    .ingredient-item {
+      background: var(--black);
+      padding: 44px 28px;
       text-align: center;
-      transition: background .2s ease, transform .2s ease;
+      transition: background .2s ease;
     }
-    .ingredient-card:hover {
-      background: rgba(255,255,255,.14);
-      transform: translateY(-4px);
-    }
-    .ingredient-icon { font-size: 40px; margin-bottom: 16px; }
-    .ingredient-name {
-      font-size: 18px;
+    .ingredient-item:hover { background: #111; }
+    .ingredient-num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 52px;
       font-weight: 700;
+      color: var(--yellow);
+      line-height: 1;
+      margin-bottom: 12px;
+      opacity: .25;
+    }
+    .ingredient-icon { font-size: 36px; margin-bottom: 14px; }
+    .ingredient-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .06em;
       color: var(--white);
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
     .ingredient-desc {
       font-size: 13px;
-      color: rgba(255,255,255,.65);
-      line-height: 1.6;
+      color: rgba(255,255,255,.55);
+      line-height: 1.65;
     }
-    .ingredients-cta {
-      text-align: center;
-      margin-top: 48px;
-    }
-    .ingredients-cta p {
-      color: rgba(255,255,255,.75);
-      font-size: 15px;
-      margin-bottom: 20px;
-    }
+    .ingredients-cta { text-align: center; margin-top: 56px; }
+    .ingredients-cta p { color: rgba(255,255,255,.5); font-size: 14px; margin-top: 16px; }
 
     /* ── Nutrition ────────────────────────────────────────── */
-    .nutrition { background: var(--white); }
+    .nutrition { background: var(--off-white); }
     .nutrition-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
       align-items: center;
     }
-    .nutrition-visual {
-      display: flex;
-      justify-content: center;
+    .nutrition-panel {
+      background: var(--white);
+      border: 2px solid var(--black);
+      border-radius: var(--radius);
+      overflow: hidden;
+      max-width: 380px;
     }
-    .nutrition-card {
-      background: var(--cream);
-      border-radius: 20px;
-      padding: 40px;
-      border: 2px solid var(--cream-dk);
-      width: 100%;
-      max-width: 360px;
-    }
-    .nutrition-card-title {
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .12em;
+    .nutrition-panel-header {
+      background: var(--black);
+      color: var(--white);
+      padding: 16px 24px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 22px;
+      font-weight: 600;
       text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .nutrition-panel-serving {
+      padding: 10px 24px;
+      font-size: 13px;
       color: var(--gray);
-      margin-bottom: 20px;
-      padding-bottom: 16px;
-      border-bottom: 2px solid var(--charcoal);
+      border-bottom: 8px solid var(--black);
     }
     .nutrition-row {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
-      padding: 10px 0;
-      border-bottom: 1px solid var(--cream-dk);
+      align-items: center;
+      padding: 10px 24px;
+      border-bottom: 1px solid var(--gray-lt);
     }
     .nutrition-row:last-child { border-bottom: none; }
-    .nutrition-label { font-size: 14px; color: var(--charcoal); }
-    .nutrition-value { font-size: 20px; font-weight: 800; color: var(--charcoal); }
-    .nutrition-row-highlight .nutrition-label { font-weight: 700; font-size: 15px; }
-    .nutrition-row-highlight .nutrition-value { font-size: 28px; color: var(--green); }
-    .nutrition-serving {
-      font-size: 12px;
-      color: var(--gray);
-      margin-top: 16px;
-    }
-    .nutrition-badges {
+    .nutrition-label { font-size: 14px; color: var(--black); font-weight: 500; }
+    .nutrition-value { font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 600; color: var(--black); }
+    .nutrition-row.highlight { background: var(--yellow); }
+    .nutrition-row.highlight .nutrition-value { font-size: 32px; }
+    .dietary-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin-top: 32px;
     }
-    .nutrition-badge {
+    .dietary-tag {
       display: flex;
       align-items: center;
       gap: 8px;
-      background: var(--cream);
-      border: 1.5px solid var(--cream-dk);
-      border-radius: 100px;
-      padding: 8px 16px;
+      border: 2px solid var(--black);
+      border-radius: 4px;
+      padding: 9px 16px;
+      font-family: 'Oswald', sans-serif;
       font-size: 13px;
       font-weight: 600;
-      color: var(--green);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--black);
     }
 
     /* ── Testimonials ─────────────────────────────────────── */
-    .testimonials { background: var(--cream); }
+    .testimonials { background: var(--blue); }
+    .testimonials .eyebrow { color: var(--yellow); }
+    .testimonials .section-title { color: var(--white); }
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -574,575 +621,349 @@
       margin-top: 56px;
     }
     .testimonial-card {
-      background: var(--white);
-      border-radius: var(--radius);
-      padding: 28px;
-      border: 1.5px solid var(--cream-dk);
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: var(--radius-lg);
+      padding: 32px;
       display: flex;
       flex-direction: column;
-      gap: 16px;
-      transition: transform .2s ease, box-shadow .2s ease;
+      gap: 20px;
+      transition: background .2s ease, transform .2s ease;
     }
     .testimonial-card:hover {
+      background: rgba(255,255,255,.16);
       transform: translateY(-4px);
-      box-shadow: var(--shadow);
+    }
+    .stars {
+      color: var(--yellow);
+      font-size: 17px;
+      letter-spacing: 2px;
     }
     .testimonial-quote {
       font-size: 15px;
-      color: var(--charcoal);
-      line-height: 1.7;
+      color: rgba(255,255,255,.88);
+      line-height: 1.75;
       font-style: italic;
+      flex: 1;
     }
     .testimonial-author {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-top: auto;
     }
     .testimonial-avatar {
-      width: 40px;
-      height: 40px;
+      width: 42px; height: 42px;
       border-radius: 50%;
-      background: var(--green);
+      background: var(--yellow);
+      color: var(--black);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--white);
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
       font-weight: 700;
-      font-size: 14px;
       flex-shrink: 0;
     }
-    .testimonial-name { font-size: 14px; font-weight: 700; color: var(--charcoal); }
-    .testimonial-meta { font-size: 12px; color: var(--gray); }
+    .testimonial-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--white);
+    }
+    .testimonial-meta { font-size: 12px; color: rgba(255,255,255,.55); }
 
     /* ── FAQ ──────────────────────────────────────────────── */
     .faq { background: var(--white); }
-    .faq-list {
-      max-width: 720px;
-      margin: 48px auto 0;
-    }
-    .faq-item {
-      border-bottom: 1.5px solid var(--cream-dk);
-    }
-    .faq-q {
+    .faq-list { max-width: 760px; margin: 56px auto 0; }
+    .faq-item { border-bottom: 2px solid var(--black); }
+    .faq-item:first-child { border-top: 2px solid var(--black); }
+    .faq-btn {
       width: 100%;
       background: none;
       border: none;
       text-align: left;
-      font-family: 'Inter', sans-serif;
-      font-size: 16px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
       font-weight: 600;
-      color: var(--charcoal);
-      padding: 20px 0;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      color: var(--black);
+      padding: 22px 0;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 16px;
     }
-    .faq-q:hover { color: var(--green); }
+    .faq-btn:hover { color: var(--blue); }
     .faq-chevron {
-      font-size: 20px;
+      font-size: 22px;
+      color: var(--blue);
       transition: transform .25s ease;
       flex-shrink: 0;
-      color: var(--green);
     }
     .faq-item.open .faq-chevron { transform: rotate(180deg); }
-    .faq-a {
+    .faq-answer {
       font-size: 15px;
       color: var(--gray);
-      line-height: 1.7;
+      line-height: 1.75;
       max-height: 0;
       overflow: hidden;
-      transition: max-height .3s ease, padding .3s ease;
+      transition: max-height .32s ease, padding-bottom .32s ease;
     }
-    .faq-item.open .faq-a {
-      max-height: 300px;
-      padding-bottom: 20px;
-    }
+    .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 24px; }
 
     /* ── Final CTA ────────────────────────────────────────── */
     .final-cta {
-      background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%);
-      padding: 100px 0;
+      background: var(--coral);
+      padding: 108px 0;
       text-align: center;
       position: relative;
       overflow: hidden;
     }
-    .final-cta::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
-    .final-cta > .container { position: relative; z-index: 1; }
-    .final-cta .section-label { color: var(--gold-lt); }
+    .final-cta .eyebrow { color: rgba(255,255,255,.7); }
     .final-cta .section-title { color: var(--white); }
-    .final-cta .section-sub { color: rgba(255,255,255,.80); }
-    .final-cta-buttons {
+    .final-cta .section-sub { color: rgba(255,255,255,.8); }
+    .final-cta-btns {
       display: flex;
       gap: 16px;
       justify-content: center;
       flex-wrap: wrap;
       margin-top: 40px;
     }
-    .btn-white {
-      background: var(--white);
-      color: var(--green);
-    }
-    .btn-white:hover { background: var(--cream); }
-    .btn-gold {
-      background: var(--gold);
-      color: var(--white);
-    }
-    .btn-gold:hover { background: #b8841f; }
     .final-cta-note {
       font-size: 13px;
       color: rgba(255,255,255,.55);
       margin-top: 20px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
     }
 
     /* ── Footer ───────────────────────────────────────────── */
-    .footer {
-      background: var(--charcoal);
-      padding: 32px 0;
-    }
+    .footer { background: var(--black); padding: 36px 0; }
     .footer-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 16px;
     }
-    .footer-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      font-weight: 800;
-      color: var(--white);
-    }
-    .footer-logo span { color: var(--gold-lt); }
-    .footer-copy {
-      font-size: 13px;
-      color: rgba(255,255,255,.45);
-    }
-    .footer-link {
-      font-size: 13px;
-      color: rgba(255,255,255,.6);
-      transition: color .15s ease;
-    }
+    .footer-logo img { height: 30px; width: auto; }
+    .footer-copy { font-size: 13px; color: rgba(255,255,255,.35); }
+    .footer-link { font-size: 13px; color: rgba(255,255,255,.5); transition: color .15s; }
     .footer-link:hover { color: var(--white); }
 
-    /* ── Announcement Banner ──────────────────────────────── */
-    .banner {
-      background: var(--gold);
-      text-align: center;
-      padding: 10px 24px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--white);
-      letter-spacing: .03em;
+    /* ── Scroll Animations ────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .65s ease, transform .65s ease;
     }
-    .banner a { text-decoration: underline; color: var(--white); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal:nth-child(2) { transition-delay: .1s; }
+    .reveal:nth-child(3) { transition-delay: .2s; }
+    .reveal:nth-child(4) { transition-delay: .3s; }
 
     /* ── Responsive ───────────────────────────────────────── */
-    @media (max-width: 900px) {
-      .hero-grid       { grid-template-columns: 1fr; text-align: center; }
-      .hero-eyebrow    { justify-content: center; }
-      .hero-sub        { margin-left: auto; margin-right: auto; }
-      .hero-ctas       { justify-content: center; }
-      .hero-stats      { justify-content: center; }
-      .hero-visual     { margin-top: 48px; }
-      .hero-award      { top: -10px; right: 10px; }
-      .products-grid   { grid-template-columns: 1fr; max-width: 420px; margin-left: auto; margin-right: auto; }
-      .why-grid        { grid-template-columns: 1fr; }
-      .why-text        { order: -1; text-align: center; }
-      .why-text .section-sub { margin: 0 auto; text-align: center; }
-      .ingredients-grid { grid-template-columns: repeat(2, 1fr); }
-      .nutrition-grid  { grid-template-columns: 1fr; }
-      .testimonials-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
-      .proof-bar-inner { gap: 16px; }
-      .proof-divider   { display: none; }
+    @media (max-width: 960px) {
+      .products-grid        { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+      .why-grid             { grid-template-columns: 1fr; gap: 56px; }
+      .why-img-wrap         { max-width: 480px; margin: 0 auto; }
+      .ingredients-grid     { grid-template-columns: repeat(2, 1fr); }
+      .nutrition-grid       { grid-template-columns: 1fr; }
+      .nutrition-panel      { max-width: 100%; }
+      .testimonials-grid    { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
+      .variety-callout      { flex-direction: column; text-align: center; }
+      .variety-callout-img  { width: 160px; margin: 0 auto; }
+      .trust-item           { flex: 1 1 auto; border-right: none; border-bottom: 1px solid rgba(255,255,255,.15); }
     }
-    @media (max-width: 600px) {
-      .section { padding: 56px 0; }
-      .why-features { grid-template-columns: 1fr; }
-      .ingredients-grid { grid-template-columns: 1fr 1fr; }
-      .hero h1 { font-size: 34px; }
-      .final-cta { padding: 72px 0; }
-      .can-wrap:nth-child(1), .can-wrap:nth-child(3) { display: none; }
+    @media (max-width: 640px) {
+      .section            { padding: 64px 0; }
+      .hero               { min-height: 100vh; }
+      .hero h1            { font-size: 52px; }
+      .hero-stats         { flex-wrap: wrap; gap: 20px; }
+      .hero-stat          { border-right: none; padding-right: 0; margin-right: 0; }
+      .why-features       { grid-template-columns: 1fr; }
+      .ingredients-grid   { grid-template-columns: 1fr; }
+      .final-cta          { padding: 72px 0; }
     }
-
-    /* ── Animations ───────────────────────────────────────── */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity .6s ease, transform .6s ease;
-    }
-    .fade-up.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .fade-up:nth-child(2) { transition-delay: .1s; }
-    .fade-up:nth-child(3) { transition-delay: .2s; }
-    .fade-up:nth-child(4) { transition-delay: .3s; }
   </style>
 </head>
 <body>
 
-  <!-- ── Announcement Banner ────────────────────────────── -->
-  <div class="banner">
-    🏆 Gold Medal Winner &nbsp;·&nbsp; Free shipping on orders over $25 on Amazon &nbsp;·&nbsp;
-    <a href="https://www.amazon.com/stores/KitNABrewing/page/51FEB168-4DD1-401D-B93F-731E2540CFE3" target="_blank" rel="noopener">Shop Now →</a>
+  <!-- ── Announcement Bar ──────────────────────────────────── -->
+  <div class="announcement">
+    🏆 Gold Medal Winner &nbsp;·&nbsp; Shop Kit N/A on Amazon — Ships Free on Orders $25+
+    &nbsp;·&nbsp;
+    <a href="https://www.amazon.com/stores/KitNABrewing/page/51FEB168-4DD1-401D-B93F-731E2540CFE3" target="_blank" rel="noopener">Order Now →</a>
   </div>
 
-  <!-- ── Nav ───────────────────────────────────────────────── -->
+  <!-- ── Nav ──────────────────────────────────────────────── -->
   <nav class="nav">
     <div class="container nav-inner">
-      <div class="nav-logo">KIT <span>N/A</span></div>
-      <a href="https://www.amazon.com/stores/KitNABrewing/page/51FEB168-4DD1-401D-B93F-731E2540CFE3"
+      <a class="nav-logo" href="#" aria-label="KIT Non-Alc">
+        <img src="https://kit-na-brewing.myshopify.com/cdn/shop/files/Kit_Non_Alc_White.png?v=1732897606&width=300"
+             alt="KIT Non-Alc logo"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <span style="display:none; font-family:'Oswald',sans-serif; font-size:22px; font-weight:700; color:#fff; text-transform:uppercase; letter-spacing:.1em;">KIT N/A</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#products">Beers</a></li>
+        <li><a href="#ingredients">Ingredients</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="https://www.amazon.com/Kit-NA-Brewing-Non-Alcoholic-Variety/dp/B0CRJQRJSM"
          target="_blank" rel="noopener"
-         class="btn btn-primary nav-cta">
-        <svg class="amazon-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
+         class="btn btn-yellow nav-cta">
+        <svg class="amz-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
         Shop on Amazon
       </a>
     </div>
   </nav>
 
-  <!-- ── Hero ──────────────────────────────────────────────── -->
+  <!-- ── Hero ─────────────────────────────────────────────── -->
   <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
     <div class="container">
-      <div class="hero-grid">
-
-        <div class="hero-text">
-          <div class="hero-eyebrow">
-            <div class="hero-divider"></div>
-            <span class="hero-eyebrow-text">Award-Winning Non-Alcoholic Craft Beer</span>
+      <div class="hero-content">
+        <div class="hero-eyebrow">🏆 Award-Winning Non-Alcoholic Craft Beer</div>
+        <h1>Beer That<br />Requires<br /><span class="accent">No Excuses.</span></h1>
+        <p class="hero-sub">
+          Real craft quality. Zero alcohol. Made with just 4 simple ingredients —
+          because great beer shouldn't be complicated.
+        </p>
+        <div class="hero-btns">
+          <a href="https://www.amazon.com/Kit-NA-Brewing-Non-Alcoholic-Variety/dp/B0CRJQRJSM"
+             target="_blank" rel="noopener"
+             class="btn btn-yellow btn-lg">
+            <svg class="amz-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
+            Shop Variety 12-Pack
+          </a>
+          <a href="#products" class="btn btn-outline-white btn-lg">See All Flavors ↓</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-num">0%</div>
+            <div class="hero-stat-label">Alcohol</div>
           </div>
-          <h1>Beer That's<br /><em>Actually Good.</em><br />Zero Alcohol.</h1>
-          <p class="hero-sub">
-            Kit N/A is the crushable, craft-quality non-alcoholic beer you've been waiting for.
-            Made with just 4 simple ingredients. Gluten-removed. Completely vegan.
-            All the flavor — none of the regret.
-          </p>
-          <div class="hero-ctas">
-            <a href="https://www.amazon.com/Kit-NA-Brewing-Non-Alcoholic-Variety/dp/B0CRJQRJSM"
-               target="_blank" rel="noopener"
-               class="btn btn-primary btn-lg">
-              <svg class="amazon-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
-              Shop Variety 12-Pack
-            </a>
-            <a href="#products" class="btn btn-outline" style="border-color:rgba(255,255,255,.5);color:var(--white);">
-              See All Flavors ↓
-            </a>
+          <div class="hero-stat">
+            <div class="hero-stat-num">83</div>
+            <div class="hero-stat-label">Calories</div>
           </div>
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <div class="hero-stat-num">0%</div>
-              <div class="hero-stat-label">Alcohol</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-num">83</div>
-              <div class="hero-stat-label">Calories</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-num">4</div>
-              <div class="hero-stat-label">Ingredients</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-num">🥇</div>
-              <div class="hero-stat-label">Gold Medal</div>
-            </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">4</div>
+            <div class="hero-stat-label">Ingredients</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">🥇</div>
+            <div class="hero-stat-label">Gold Medal</div>
           </div>
         </div>
-
-        <div class="hero-visual">
-          <div style="position:relative;">
-            <div class="hero-cans">
-              <!-- Can 1: On Your Mark (Blonde) -->
-              <div class="can-wrap">
-                <svg width="120" height="210" viewBox="0 0 120 210" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="can1-body" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" style="stop-color:#C8952A"/>
-                      <stop offset="40%" style="stop-color:#E8B84B"/>
-                      <stop offset="100%" style="stop-color:#9a7020"/>
-                    </linearGradient>
-                    <linearGradient id="can1-top" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" style="stop-color:#d0d0d0"/>
-                      <stop offset="100%" style="stop-color:#888"/>
-                    </linearGradient>
-                  </defs>
-                  <!-- Body -->
-                  <rect x="10" y="20" width="100" height="170" rx="12" fill="url(#can1-body)"/>
-                  <!-- Shine -->
-                  <rect x="18" y="25" width="18" height="160" rx="6" fill="rgba(255,255,255,0.18)"/>
-                  <!-- Label area -->
-                  <rect x="12" y="55" width="96" height="110" rx="4" fill="rgba(0,0,0,0.15)"/>
-                  <!-- "KIT" text -->
-                  <text x="60" y="95" text-anchor="middle" fill="white" font-family="Georgia,serif" font-size="22" font-weight="bold">KIT</text>
-                  <text x="60" y="112" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-family="Georgia,serif" font-size="10" letter-spacing="3">N/A</text>
-                  <text x="60" y="138" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="9" font-weight="bold" letter-spacing="1">ON YOUR MARK</text>
-                  <text x="60" y="152" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-family="Arial,sans-serif" font-size="8">BLONDE ALE</text>
-                  <!-- Top rim -->
-                  <ellipse cx="60" cy="20" rx="50" ry="10" fill="url(#can1-top)"/>
-                  <ellipse cx="60" cy="17" rx="28" ry="6" fill="#bbb"/>
-                  <!-- Tab -->
-                  <rect x="52" y="8" width="16" height="12" rx="3" fill="#aaa"/>
-                  <!-- Bottom -->
-                  <ellipse cx="60" cy="190" rx="50" ry="10" fill="#7a6020"/>
-                </svg>
-              </div>
-
-              <!-- Can 2: Here We Go (Hazy IPA) — center/hero -->
-              <div class="can-wrap">
-                <svg width="140" height="240" viewBox="0 0 140 240" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="can2-body" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" style="stop-color:#2D5016"/>
-                      <stop offset="45%" style="stop-color:#4a7a25"/>
-                      <stop offset="100%" style="stop-color:#1a3a0a"/>
-                    </linearGradient>
-                    <linearGradient id="can2-top" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" style="stop-color:#d0d0d0"/>
-                      <stop offset="100%" style="stop-color:#888"/>
-                    </linearGradient>
-                  </defs>
-                  <rect x="10" y="22" width="120" height="196" rx="14" fill="url(#can2-body)"/>
-                  <rect x="20" y="28" width="22" height="184" rx="8" fill="rgba(255,255,255,0.12)"/>
-                  <rect x="12" y="60" width="116" height="130" rx="4" fill="rgba(0,0,0,0.18)"/>
-                  <!-- Gold accent bar -->
-                  <rect x="12" y="58" width="116" height="4" rx="2" fill="#C8952A"/>
-                  <rect x="12" y="188" width="116" height="4" rx="2" fill="#C8952A"/>
-                  <text x="70" y="105" text-anchor="middle" fill="white" font-family="Georgia,serif" font-size="28" font-weight="bold">KIT</text>
-                  <text x="70" y="125" text-anchor="middle" fill="#E8B84B" font-family="Georgia,serif" font-size="12" letter-spacing="4">N / A</text>
-                  <text x="70" y="156" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="10" font-weight="bold" letter-spacing="2">HERE WE GO</text>
-                  <text x="70" y="171" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif" font-size="9">HAZY IPA  •  GOLD MEDAL</text>
-                  <ellipse cx="70" cy="22" rx="60" ry="12" fill="url(#can2-top)"/>
-                  <ellipse cx="70" cy="19" rx="34" ry="7" fill="#bbb"/>
-                  <rect x="60" y="8" width="20" height="14" rx="4" fill="#aaa"/>
-                  <ellipse cx="70" cy="218" rx="60" ry="12" fill="#1a3a0a"/>
-                </svg>
-              </div>
-
-              <!-- Can 3: Get Set (Wheat) -->
-              <div class="can-wrap">
-                <svg width="120" height="210" viewBox="0 0 120 210" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="can3-body" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" style="stop-color:#8B4513"/>
-                      <stop offset="45%" style="stop-color:#CD853F"/>
-                      <stop offset="100%" style="stop-color:#6b3510"/>
-                    </linearGradient>
-                    <linearGradient id="can3-top" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" style="stop-color:#d0d0d0"/>
-                      <stop offset="100%" style="stop-color:#888"/>
-                    </linearGradient>
-                  </defs>
-                  <rect x="10" y="20" width="100" height="170" rx="12" fill="url(#can3-body)"/>
-                  <rect x="18" y="25" width="18" height="160" rx="6" fill="rgba(255,255,255,0.15)"/>
-                  <rect x="12" y="55" width="96" height="110" rx="4" fill="rgba(0,0,0,0.18)"/>
-                  <text x="60" y="95" text-anchor="middle" fill="white" font-family="Georgia,serif" font-size="22" font-weight="bold">KIT</text>
-                  <text x="60" y="112" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-family="Georgia,serif" font-size="10" letter-spacing="3">N/A</text>
-                  <text x="60" y="138" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="9" font-weight="bold" letter-spacing="1">GET SET</text>
-                  <text x="60" y="152" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-family="Arial,sans-serif" font-size="8">WHEAT ALE</text>
-                  <ellipse cx="60" cy="20" rx="50" ry="10" fill="url(#can3-top)"/>
-                  <ellipse cx="60" cy="17" rx="28" ry="6" fill="#bbb"/>
-                  <rect x="52" y="8" width="16" height="12" rx="3" fill="#aaa"/>
-                  <ellipse cx="60" cy="190" rx="50" ry="10" fill="#5a2e0e"/>
-                </svg>
-              </div>
-            </div>
-            <!-- Award badge -->
-            <div class="hero-award">
-              <div class="hero-award-icon">🏆</div>
-              <div>GOLD<br/>MEDAL<br/>WINNER</div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ── Social Proof Bar ───────────────────────────────────── -->
-  <div class="proof-bar">
-    <div class="container proof-bar-inner">
-      <div class="proof-item">
-        <span class="proof-icon">🏆</span>
-        <span>Gold Medal Award-Winner</span>
-      </div>
-      <div class="proof-divider"></div>
-      <div class="proof-item">
-        <span class="proof-icon">🌱</span>
-        <span>100% Vegan & Gluten-Removed</span>
-      </div>
-      <div class="proof-divider"></div>
-      <div class="proof-item">
-        <span class="proof-icon">🍺</span>
-        <span>Craft Quality, Zero Alcohol</span>
-      </div>
-      <div class="proof-divider"></div>
-      <div class="proof-item">
-        <span class="proof-icon">📦</span>
-        <span>Ships Nationwide via Amazon</span>
-      </div>
-      <div class="proof-divider"></div>
-      <div class="proof-item">
-        <span class="stars">★★★★★</span>
-        <span style="margin-left:4px;">Rated 5 Stars</span>
-      </div>
+  <!-- ── Trust Bar ─────────────────────────────────────────── -->
+  <div class="trust-bar">
+    <div class="container trust-bar-inner">
+      <div class="trust-item"><span class="trust-item-icon">🏆</span> Gold Medal Award-Winner</div>
+      <div class="trust-item"><span class="trust-item-icon">🌱</span> Vegan &amp; Gluten-Removed</div>
+      <div class="trust-item"><span class="trust-item-icon">🍺</span> 4 Simple Ingredients</div>
+      <div class="trust-item"><span class="trust-item-icon">📦</span> Ships Nationwide via Amazon</div>
+      <div class="trust-item"><span class="trust-item-icon">⭐</span> 5-Star Rated</div>
     </div>
   </div>
 
-  <!-- ── Products ───────────────────────────────────────────── -->
+  <!-- ── Products ──────────────────────────────────────────── -->
   <section class="section products" id="products">
     <div class="container">
-      <div class="text-center">
-        <p class="section-label">The Lineup</p>
+      <div class="products-header text-center">
+        <span class="eyebrow">The Lineup</span>
         <h2 class="section-title">Pick Your Perfect Pour</h2>
-        <p class="section-sub">Three distinct styles, all delivering the real craft beer experience you love — without a drop of alcohol.</p>
+        <p class="section-sub centered">Three distinct styles. All delivering real craft beer flavor — without a drop of alcohol.</p>
       </div>
 
       <div class="products-grid">
 
-        <!-- Product 1: On Your Mark -->
-        <div class="product-card fade-up">
-          <div class="product-card-visual">
-            <div class="product-card-bg" style="background: linear-gradient(135deg,#C8952A,#E8B84B);"></div>
-            <div class="card-can">
-              <svg width="110" height="190" viewBox="0 0 120 210" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="p1-body" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style="stop-color:#C8952A"/>
-                    <stop offset="45%" style="stop-color:#E8B84B"/>
-                    <stop offset="100%" style="stop-color:#9a7020"/>
-                  </linearGradient>
-                </defs>
-                <rect x="10" y="20" width="100" height="170" rx="12" fill="url(#p1-body)"/>
-                <rect x="18" y="25" width="18" height="160" rx="6" fill="rgba(255,255,255,0.18)"/>
-                <rect x="12" y="55" width="96" height="110" rx="4" fill="rgba(0,0,0,0.15)"/>
-                <text x="60" y="95" text-anchor="middle" fill="white" font-family="Georgia,serif" font-size="22" font-weight="bold">KIT</text>
-                <text x="60" y="112" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-family="Georgia,serif" font-size="10" letter-spacing="3">N/A</text>
-                <text x="60" y="138" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="9" font-weight="bold" letter-spacing="1">ON YOUR MARK</text>
-                <text x="60" y="152" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-family="Arial,sans-serif" font-size="8">BLONDE ALE</text>
-                <ellipse cx="60" cy="20" rx="50" ry="10" fill="#d0d0d0"/>
-                <ellipse cx="60" cy="17" rx="28" ry="6" fill="#bbb"/>
-                <rect x="52" y="8" width="16" height="12" rx="3" fill="#aaa"/>
-                <ellipse cx="60" cy="190" rx="50" ry="10" fill="#7a6020"/>
-              </svg>
-            </div>
+        <!-- On Your Mark -->
+        <div class="product-card reveal">
+          <div class="product-card-img">
+            <img src="https://kit-na-brewing.myshopify.com/cdn/shop/files/Blonde_3Cans.jpg?v=1732207523&width=800"
+                 alt="Kit N/A On Your Mark Blonde Ale — 3 cans"
+                 loading="lazy" />
+            <span class="product-card-badge">Multi-Award Winner</span>
           </div>
           <div class="product-card-body">
-            <div class="product-card-tag">Non-Alcoholic Blonde Ale</div>
-            <div class="product-card-name">On Your Mark</div>
-            <div class="product-card-award">🏅 Multi-Award Winner</div>
-            <p class="product-card-desc">Light, citrusy, and endlessly drinkable. Bursting with bright grapefruit notes and a crisp, hop-forward finish. This is the beer you reach for when you want to feel good about what's in your hand.</p>
-            <div class="flavor-tags">
-              <span class="flavor-tag">Grapefruit</span>
-              <span class="flavor-tag">Citrus</span>
-              <span class="flavor-tag">Crisp</span>
-              <span class="flavor-tag">Hop-Forward</span>
+            <div class="product-type">Non-Alcoholic Blonde Ale</div>
+            <h3 class="product-name">On Your Mark</h3>
+            <p class="product-desc">Light, citrusy, and endlessly drinkable. Bursting with bright grapefruit notes and a crisp, hop-forward finish. The one you crack open and immediately want another.</p>
+            <div class="flavor-pills">
+              <span class="flavor-pill">Grapefruit</span>
+              <span class="flavor-pill">Citrus</span>
+              <span class="flavor-pill">Crisp</span>
+              <span class="flavor-pill">Hop-Forward</span>
             </div>
             <a href="https://www.amazon.com/Kit-NA-Brewing-Non-Alcoholic-Blonde/dp/B0DJCFTWYZ"
                target="_blank" rel="noopener"
-               class="btn btn-primary">
-              <svg class="amazon-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
+               class="btn btn-blue">
+              <svg class="amz-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
               Shop 6-Pack on Amazon
             </a>
           </div>
         </div>
 
-        <!-- Product 2: Get Set -->
-        <div class="product-card fade-up">
-          <div class="product-card-visual">
-            <div class="product-card-bg" style="background: linear-gradient(135deg,#8B4513,#CD853F);"></div>
-            <div class="card-can">
-              <svg width="110" height="190" viewBox="0 0 120 210" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="p2-body" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style="stop-color:#8B4513"/>
-                    <stop offset="45%" style="stop-color:#CD853F"/>
-                    <stop offset="100%" style="stop-color:#6b3510"/>
-                  </linearGradient>
-                </defs>
-                <rect x="10" y="20" width="100" height="170" rx="12" fill="url(#p2-body)"/>
-                <rect x="18" y="25" width="18" height="160" rx="6" fill="rgba(255,255,255,0.15)"/>
-                <rect x="12" y="55" width="96" height="110" rx="4" fill="rgba(0,0,0,0.18)"/>
-                <text x="60" y="95" text-anchor="middle" fill="white" font-family="Georgia,serif" font-size="22" font-weight="bold">KIT</text>
-                <text x="60" y="112" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-family="Georgia,serif" font-size="10" letter-spacing="3">N/A</text>
-                <text x="60" y="138" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="9" font-weight="bold" letter-spacing="1">GET SET</text>
-                <text x="60" y="152" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-family="Arial,sans-serif" font-size="8">WHEAT ALE</text>
-                <ellipse cx="60" cy="20" rx="50" ry="10" fill="#d0d0d0"/>
-                <ellipse cx="60" cy="17" rx="28" ry="6" fill="#bbb"/>
-                <rect x="52" y="8" width="16" height="12" rx="3" fill="#aaa"/>
-                <ellipse cx="60" cy="190" rx="50" ry="10" fill="#5a2e0e"/>
-              </svg>
-            </div>
+        <!-- Get Set -->
+        <div class="product-card reveal">
+          <div class="product-card-img">
+            <img src="https://kit-na-brewing.myshopify.com/cdn/shop/files/Golden_3Cans.jpg?v=1732207288&width=800"
+                 alt="Kit N/A Get Set Golden Ale — 3 cans"
+                 loading="lazy" />
+            <span class="product-card-badge">Bright &amp; Crushable</span>
           </div>
           <div class="product-card-body">
-            <div class="product-card-tag">Non-Alcoholic Wheat Ale</div>
-            <div class="product-card-name">Get Set</div>
-            <div class="product-card-award">🌾 Bright & Crushable</div>
-            <p class="product-card-desc">Smooth, sessionable, and full of personality. Notes of warm spice and fresh orange peel make this wheat ale the perfect companion for any moment — from backyard cookouts to Tuesday nights.</p>
-            <div class="flavor-tags">
-              <span class="flavor-tag">Orange Peel</span>
-              <span class="flavor-tag">Spice</span>
-              <span class="flavor-tag">Smooth</span>
-              <span class="flavor-tag">Wheat</span>
+            <div class="product-type">Non-Alcoholic Golden Ale</div>
+            <h3 class="product-name">Get Set</h3>
+            <p class="product-desc">Smooth, sessionable, and full of character. Notes of warm spice and fresh orange peel come together in a wheat ale that's as easy-drinking as it is satisfying.</p>
+            <div class="flavor-pills">
+              <span class="flavor-pill">Orange Peel</span>
+              <span class="flavor-pill">Warm Spice</span>
+              <span class="flavor-pill">Smooth</span>
+              <span class="flavor-pill">Sessionable</span>
             </div>
             <a href="https://www.amazon.com/Kit-NA-Brewing-Non-Alcoholic-6-Pack/dp/B0CRHYTHNF"
                target="_blank" rel="noopener"
-               class="btn btn-primary">
-              <svg class="amazon-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
+               class="btn btn-blue">
+              <svg class="amz-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
               Shop 6-Pack on Amazon
             </a>
           </div>
         </div>
 
-        <!-- Product 3: Here We Go -->
-        <div class="product-card fade-up">
-          <div class="product-card-visual">
-            <div class="product-card-bg" style="background: linear-gradient(135deg,#2D5016,#5A8A33);"></div>
-            <div class="card-can">
-              <svg width="110" height="190" viewBox="0 0 140 240" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="p3-body" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style="stop-color:#2D5016"/>
-                    <stop offset="45%" style="stop-color:#4a7a25"/>
-                    <stop offset="100%" style="stop-color:#1a3a0a"/>
-                  </linearGradient>
-                </defs>
-                <rect x="10" y="22" width="120" height="196" rx="14" fill="url(#p3-body)"/>
-                <rect x="20" y="28" width="22" height="184" rx="8" fill="rgba(255,255,255,0.12)"/>
-                <rect x="12" y="60" width="116" height="130" rx="4" fill="rgba(0,0,0,0.18)"/>
-                <rect x="12" y="58" width="116" height="4" rx="2" fill="#C8952A"/>
-                <rect x="12" y="188" width="116" height="4" rx="2" fill="#C8952A"/>
-                <text x="70" y="105" text-anchor="middle" fill="white" font-family="Georgia,serif" font-size="28" font-weight="bold">KIT</text>
-                <text x="70" y="125" text-anchor="middle" fill="#E8B84B" font-family="Georgia,serif" font-size="12" letter-spacing="4">N / A</text>
-                <text x="70" y="156" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="10" font-weight="bold" letter-spacing="2">HERE WE GO</text>
-                <text x="70" y="171" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="Arial,sans-serif" font-size="9">HAZY IPA  •  🥇 GOLD MEDAL</text>
-                <ellipse cx="70" cy="22" rx="60" ry="12" fill="#d0d0d0"/>
-                <ellipse cx="70" cy="19" rx="34" ry="7" fill="#bbb"/>
-                <rect x="60" y="8" width="20" height="14" rx="4" fill="#aaa"/>
-                <ellipse cx="70" cy="218" rx="60" ry="12" fill="#1a3a0a"/>
-              </svg>
-            </div>
+        <!-- Here We Go -->
+        <div class="product-card reveal">
+          <div class="product-card-img">
+            <img src="https://kit-na-brewing.myshopify.com/cdn/shop/files/HazyIPA_3Cans.jpg?v=1732207439&width=800"
+                 alt="Kit N/A Here We Go Hazy IPA — 3 cans"
+                 loading="lazy" />
+            <span class="product-card-badge">🥇 Gold Medal Winner</span>
           </div>
           <div class="product-card-body">
-            <div class="product-card-tag">Non-Alcoholic Hazy IPA</div>
-            <div class="product-card-name">Here We Go</div>
-            <div class="product-card-award">🥇 Gold Medal Winner</div>
-            <p class="product-card-desc">The one that wins awards. Tropical, juicy, and absolutely bursting with hop aroma — finishing with barely any bitterness. This is what a great Hazy IPA is supposed to taste like, just without the alcohol.</p>
-            <div class="flavor-tags">
-              <span class="flavor-tag">Tropical</span>
-              <span class="flavor-tag">Juicy</span>
-              <span class="flavor-tag">Hazy</span>
-              <span class="flavor-tag">Idaho 7 Hops</span>
+            <div class="product-type">Non-Alcoholic Hazy IPA</div>
+            <h3 class="product-name">Here We Go</h3>
+            <p class="product-desc">The award-winner. Tropical, juicy, and bursting with hop aroma — finishing with barely any bitterness. This is what a world-class Hazy IPA tastes like, with zero alcohol.</p>
+            <div class="flavor-pills">
+              <span class="flavor-pill">Tropical</span>
+              <span class="flavor-pill">Juicy</span>
+              <span class="flavor-pill">Idaho 7 Hops</span>
+              <span class="flavor-pill">Hazy</span>
             </div>
             <a href="https://www.amazon.com/Kit-NA-Brewing-Non-Alcoholic-Variety/dp/B0CRJQRJSM"
                target="_blank" rel="noopener"
-               class="btn btn-primary">
-              <svg class="amazon-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
+               class="btn btn-blue">
+              <svg class="amz-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
               Shop Variety 12-Pack
             </a>
           </div>
@@ -1150,16 +971,20 @@
 
       </div>
 
-      <!-- Best Value callout -->
-      <div style="text-align:center; margin-top:40px;">
-        <div style="display:inline-flex; align-items:center; gap:16px; background:var(--cream-dk); border-radius:100px; padding:16px 32px; border:1.5px solid var(--cream-dk);">
-          <span style="font-size:22px;">🎉</span>
-          <span style="font-size:15px; font-weight:600; color:var(--charcoal);">Try all three — </span>
+      <!-- Variety Pack Callout -->
+      <div class="variety-callout reveal">
+        <img class="variety-callout-img"
+             src="https://kit-na-brewing.myshopify.com/cdn/shop/files/KitNA_BoxRender_Variety.jpg?v=1732207887&width=400"
+             alt="Kit N/A Variety 12-Pack box"
+             loading="lazy" />
+        <div class="variety-callout-text">
+          <h3>Can't Pick Just One?</h3>
+          <p>The Variety 12-Pack gives you 4 of each — On Your Mark, Get Set, and Here We Go. Try the full lineup and find your favorite. Most people can't.</p>
           <a href="https://www.amazon.com/Kit-NA-Brewing-Non-Alcoholic-Variety/dp/B0CRJQRJSM"
              target="_blank" rel="noopener"
-             class="btn btn-dark btn-sm">
-            <svg class="amazon-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
-            Get the Variety 12-Pack →
+             class="btn btn-yellow">
+            <svg class="amz-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
+            Get the Variety 12-Pack on Amazon
           </a>
         </div>
       </div>
@@ -1170,48 +995,52 @@
   <section class="section why">
     <div class="container">
       <div class="why-grid">
-        <div class="why-features">
-          <div class="why-feature fade-up">
-            <div class="why-feature-icon">🏆</div>
-            <div class="why-feature-title">Award-Winning Taste</div>
-            <p class="why-feature-desc">Gold medal-winning flavor that stands up against any craft beer on the shelf — alcoholic or not.</p>
-          </div>
-          <div class="why-feature fade-up">
-            <div class="why-feature-icon">🌿</div>
-            <div class="why-feature-title">Clean Ingredients</div>
-            <p class="why-feature-desc">Just water, malt, hops, and yeast. Nothing artificial. Nothing hidden. Nothing you can't pronounce.</p>
-          </div>
-          <div class="why-feature fade-up">
-            <div class="why-feature-icon">🚫🌾</div>
-            <div class="why-feature-title">Gluten-Removed</div>
-            <p class="why-feature-desc">Brewed with traditional grains, then crafted to remove gluten — so more people can enjoy it.</p>
-          </div>
-          <div class="why-feature fade-up">
-            <div class="why-feature-icon">🌱</div>
-            <div class="why-feature-title">Vegan & Dairy-Free</div>
-            <p class="why-feature-desc">Fully vegan, fully dairy-free. A mindful choice that doesn't ask you to sacrifice anything.</p>
-          </div>
-          <div class="why-feature fade-up">
-            <div class="why-feature-icon">⚡</div>
-            <div class="why-feature-title">Low Calorie</div>
-            <p class="why-feature-desc">Only 83 calories per can. Feel good before, during, and after every pour.</p>
-          </div>
-          <div class="why-feature fade-up">
-            <div class="why-feature-icon">🍺</div>
-            <div class="why-feature-title">Craft Brewery Quality</div>
-            <p class="why-feature-desc">Real craft brewing. Real flavor. Built by people who love beer and believe you shouldn't have to choose.</p>
+        <div class="why-img-wrap reveal">
+          <img class="why-img-main"
+               src="https://kit-na-brewing.myshopify.com/cdn/shop/files/KitNA_PhotoManipulation_Blonde_Ice_v1.jpg?v=1732898553&width=900"
+               alt="Kit N/A Blonde beer on ice"
+               loading="lazy"
+               onerror="this.src='https://kit-na-brewing.myshopify.com/cdn/shop/files/Blonde_3Cans.jpg?v=1732207523&width=800'" />
+          <div class="why-img-badge">
+            <div class="why-img-badge-num">2021</div>
+            <div>Founded<br/>in Maine</div>
           </div>
         </div>
-
-        <div class="why-text">
-          <p class="section-label">Why Kit N/A</p>
+        <div class="reveal">
+          <span class="eyebrow">Why Kit N/A</span>
           <h2 class="section-title">You Deserve Beer That Doesn't Compromise.</h2>
-          <p class="section-sub">Kit N/A was built for people who love the taste, ritual, and social magic of a great beer — but want to stay in control. Whether you're sober curious, a designated driver, a parent, an athlete, or just someone who's had enough hangovers, Kit N/A is your beer.</p>
-          <div style="margin-top:32px;">
+          <p class="section-sub">Kit N/A was built for people who love the taste, ritual, and social experience of a great beer — but want to stay in control. Whether you're sober curious, a designated driver, a parent, an athlete, or just done with hangovers.</p>
+          <div class="why-features">
+            <div class="why-feature">
+              <div class="why-feature-title">Award-Winning Taste</div>
+              <p class="why-feature-desc">Gold medal flavor that holds up against any craft beer on the shelf.</p>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-title">Clean Ingredients</div>
+              <p class="why-feature-desc">Water, malt, hops, yeast. Nothing artificial. Nothing hidden.</p>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-title">Gluten-Removed</div>
+              <p class="why-feature-desc">Brewed with real grains, processed to remove gluten below 20ppm.</p>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-title">Vegan &amp; Dairy-Free</div>
+              <p class="why-feature-desc">A mindful choice that doesn't ask you to sacrifice anything.</p>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-title">Only 83 Calories</div>
+              <p class="why-feature-desc">Feel good before, during, and after every sip.</p>
+            </div>
+            <div class="why-feature">
+              <div class="why-feature-title">Craft Brewery Quality</div>
+              <p class="why-feature-desc">Maine's first exclusively non-alcoholic craft brewery.</p>
+            </div>
+          </div>
+          <div style="margin-top:36px;">
             <a href="https://www.amazon.com/Kit-NA-Brewing-Non-Alcoholic-Variety/dp/B0CRJQRJSM"
                target="_blank" rel="noopener"
-               class="btn btn-primary">
-              <svg class="amazon-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
+               class="btn btn-coral">
+              <svg class="amz-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
               Shop Now on Amazon
             </a>
           </div>
@@ -1223,27 +1052,31 @@
   <!-- ── Ingredients ────────────────────────────────────────── -->
   <section class="section ingredients" id="ingredients">
     <div class="container text-center">
-      <p class="section-label">What's Inside</p>
+      <span class="eyebrow">What's Inside</span>
       <h2 class="section-title">4 Ingredients. That's It.</h2>
-      <p class="section-sub">We believe great beer doesn't need a chemistry lab. Kit N/A is brewed the old-fashioned way — with real craft and nothing to hide.</p>
+      <p class="section-sub centered">We believe great beer doesn't need a chemistry lab. Kit N/A is brewed the old-fashioned way — with real craft and absolutely nothing to hide.</p>
 
       <div class="ingredients-grid">
-        <div class="ingredient-card fade-up">
+        <div class="ingredient-item reveal">
+          <div class="ingredient-num">01</div>
           <div class="ingredient-icon">💧</div>
           <div class="ingredient-name">Water</div>
-          <p class="ingredient-desc">Pure, clean water forms the base of every can. No shortcuts, no additives.</p>
+          <p class="ingredient-desc">Pure, clean water is the foundation of every can. No shortcuts. No additives.</p>
         </div>
-        <div class="ingredient-card fade-up">
+        <div class="ingredient-item reveal">
+          <div class="ingredient-num">02</div>
           <div class="ingredient-icon">🌾</div>
           <div class="ingredient-name">Malt</div>
           <p class="ingredient-desc">Quality malted barley gives Kit N/A its rich body, color, and signature depth of flavor.</p>
         </div>
-        <div class="ingredient-card fade-up">
+        <div class="ingredient-item reveal">
+          <div class="ingredient-num">03</div>
           <div class="ingredient-icon">🌿</div>
           <div class="ingredient-name">Hops</div>
           <p class="ingredient-desc">Premium hops — Simcoe, Idaho 7, El Dorado — bring the aroma, bitterness, and character.</p>
         </div>
-        <div class="ingredient-card fade-up">
+        <div class="ingredient-item reveal">
+          <div class="ingredient-num">04</div>
           <div class="ingredient-icon">🧬</div>
           <div class="ingredient-name">Yeast</div>
           <p class="ingredient-desc">Carefully selected yeast drives the fermentation that makes Kit N/A taste like real craft beer.</p>
@@ -1251,13 +1084,13 @@
       </div>
 
       <div class="ingredients-cta">
-        <p>No artificial flavors. No preservatives. No nonsense.</p>
         <a href="https://www.amazon.com/Kit-NA-Brewing-Non-Alcoholic-Variety/dp/B0CRJQRJSM"
            target="_blank" rel="noopener"
-           class="btn btn-white btn-lg">
-          <svg class="amazon-icon" viewBox="0 0 24 24" fill="#2D5016"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
+           class="btn btn-yellow btn-lg">
+          <svg class="amz-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
           Order on Amazon Today
         </a>
+        <p>No artificial flavors. No preservatives. No nonsense.</p>
       </div>
     </div>
   </section>
@@ -1266,50 +1099,49 @@
   <section class="section nutrition">
     <div class="container">
       <div class="nutrition-grid">
-        <div>
-          <p class="section-label">Nutrition Facts</p>
+        <div class="reveal">
+          <span class="eyebrow">Nutrition Facts</span>
           <h2 class="section-title">Feel Good About Every Sip.</h2>
-          <p class="section-sub" style="margin:0; text-align:left; max-width:420px;">Kit N/A is low-calorie, zero-alcohol, and made with clean ingredients. It's the beer your body actually thanks you for.</p>
-          <div class="nutrition-badges">
-            <span class="nutrition-badge">✓ Gluten-Removed</span>
-            <span class="nutrition-badge">✓ Vegan</span>
-            <span class="nutrition-badge">✓ Dairy-Free</span>
-            <span class="nutrition-badge">✓ 0% Alcohol</span>
+          <p class="section-sub">Low-calorie, zero-alcohol, and made with clean ingredients. It's the beer your body actually thanks you for.</p>
+          <div class="dietary-tags" style="margin-top:28px;">
+            <span class="dietary-tag">✓ Gluten-Removed</span>
+            <span class="dietary-tag">✓ Vegan</span>
+            <span class="dietary-tag">✓ Dairy-Free</span>
+            <span class="dietary-tag">✓ 0% Alcohol</span>
           </div>
-          <div style="margin-top:32px;">
+          <div style="margin-top:36px;">
             <a href="https://www.amazon.com/Kit-NA-Brewing-Non-Alcoholic-Variety/dp/B0CRJQRJSM"
                target="_blank" rel="noopener"
-               class="btn btn-primary">
-              <svg class="amazon-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
+               class="btn btn-blue">
+              <svg class="amz-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
               Shop on Amazon
             </a>
           </div>
         </div>
-
-        <div class="nutrition-visual fade-up">
-          <div class="nutrition-card">
-            <div class="nutrition-card-title">Nutrition Facts — Per 12 fl oz Can</div>
-            <div class="nutrition-row nutrition-row-highlight">
-              <span class="nutrition-label">Calories</span>
-              <span class="nutrition-value">83</span>
+        <div class="reveal" style="display:flex; justify-content:center;">
+          <div class="nutrition-panel">
+            <div class="nutrition-panel-header">Nutrition Facts</div>
+            <div class="nutrition-panel-serving">Per 12 fl oz (355mL) serving</div>
+            <div class="nutrition-row highlight">
+              <span class="nutrition-label" style="font-family:'Oswald',sans-serif; font-size:18px; font-weight:700; text-transform:uppercase;">Calories</span>
+              <span class="nutrition-value" style="font-size:40px;">83</span>
             </div>
             <div class="nutrition-row">
               <span class="nutrition-label">Alcohol By Volume</span>
-              <span class="nutrition-value" style="font-size:18px;">0%</span>
+              <span class="nutrition-value">0%</span>
             </div>
             <div class="nutrition-row">
               <span class="nutrition-label">Total Carbohydrates</span>
-              <span class="nutrition-value" style="font-size:18px;">17g</span>
+              <span class="nutrition-value">17g</span>
             </div>
             <div class="nutrition-row">
               <span class="nutrition-label">Protein</span>
-              <span class="nutrition-value" style="font-size:18px;">1.5g</span>
+              <span class="nutrition-value">1.5g</span>
             </div>
             <div class="nutrition-row">
               <span class="nutrition-label">Total Fat</span>
-              <span class="nutrition-value" style="font-size:18px;">0g</span>
+              <span class="nutrition-value">0g</span>
             </div>
-            <p class="nutrition-serving">Per 12 fl oz (355mL) serving. Values are approximate.</p>
           </div>
         </div>
       </div>
@@ -1320,14 +1152,13 @@
   <section class="section testimonials">
     <div class="container">
       <div class="text-center">
-        <p class="section-label">What People Are Saying</p>
+        <span class="eyebrow">What People Are Saying</span>
         <h2 class="section-title">Real Beer Fans. Real Reviews.</h2>
-        <div class="stars" style="margin-top:12px;">★★★★★</div>
+        <div class="stars" style="margin-top:10px;">★★★★★</div>
       </div>
-
       <div class="testimonials-grid">
-        <div class="testimonial-card fade-up">
-          <div class="stars" style="font-size:15px;">★★★★★</div>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
           <p class="testimonial-quote">"I genuinely couldn't believe this was non-alcoholic. The Here We Go Hazy IPA is the closest thing I've found to a real craft beer. I don't miss alcohol when I have this in my hand."</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">J</div>
@@ -1337,9 +1168,9 @@
             </div>
           </div>
         </div>
-        <div class="testimonial-card fade-up">
-          <div class="stars" style="font-size:15px;">★★★★★</div>
-          <p class="testimonial-quote">"Finally found an NA beer that my husband and I actually fight over. We ordered the variety pack and finished it in a weekend. Ordering again this week — the Blonde Ale is incredible."</p>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">"Finally found an NA beer that my husband and I actually fight over. We ordered the variety pack and finished it in a weekend. The Blonde Ale is absolutely incredible."</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">S</div>
             <div>
@@ -1348,14 +1179,14 @@
             </div>
           </div>
         </div>
-        <div class="testimonial-card fade-up">
-          <div class="stars" style="font-size:15px;">★★★★★</div>
-          <p class="testimonial-quote">"As a runner who stopped drinking, I was tired of options that tasted like sparkling water wearing a beer costume. Kit N/A is legit. The Wheat Ale is my go-to after a long run."</p>
+        <div class="testimonial-card reveal">
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-quote">"As a runner who stopped drinking, I was tired of options that tasted like sparkling water in a costume. Kit N/A is legit. The Golden Ale is my go-to after a long run."</p>
           <div class="testimonial-author">
             <div class="testimonial-avatar">M</div>
             <div>
               <div class="testimonial-name">Marcus T.</div>
-              <div class="testimonial-meta">Verified Amazon Purchase · Wheat Ale</div>
+              <div class="testimonial-meta">Verified Amazon Purchase · Golden Ale</div>
             </div>
           </div>
         </div>
@@ -1364,55 +1195,54 @@
   </section>
 
   <!-- ── FAQ ───────────────────────────────────────────────── -->
-  <section class="section faq">
+  <section class="section faq" id="faq">
     <div class="container">
       <div class="text-center">
-        <p class="section-label">Got Questions?</p>
+        <span class="eyebrow">Got Questions?</span>
         <h2 class="section-title">Everything You Need to Know</h2>
       </div>
-
       <div class="faq-list">
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-btn" onclick="toggleFaq(this)">
             Does Kit N/A actually taste like real beer?
             <span class="faq-chevron">&#8964;</span>
           </button>
-          <div class="faq-a">Yes — and that's the whole point. Kit N/A is brewed using traditional craft brewing methods, with the same quality ingredients you'd find in any great craft beer. The result is a beverage that looks, smells, and tastes like the real thing. Our Here We Go Hazy IPA is a gold medal winner for a reason.</div>
+          <div class="faq-answer">Yes — and that's the whole point. Kit N/A is brewed using traditional craft brewing methods with the same quality ingredients found in any great craft beer. The result is a beverage that looks, smells, and tastes like the real thing. Our Here We Go Hazy IPA is a gold medal winner for a reason.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-btn" onclick="toggleFaq(this)">
             What does "non-alcoholic" mean — is there really zero alcohol?
             <span class="faq-chevron">&#8964;</span>
           </button>
-          <div class="faq-a">Kit N/A contains less than 0.5% ABV, which is the legal and industry-standard definition of "non-alcoholic." For context, many fruit juices and kombucha naturally contain similar trace amounts. Kit N/A is safe for people avoiding alcohol and won't cause intoxication.</div>
+          <div class="faq-answer">Kit N/A contains less than 0.5% ABV, which is the legal and industry-standard definition of "non-alcoholic." For context, many fruit juices and kombucha naturally contain similar trace amounts. Kit N/A is safe for people avoiding alcohol and will not cause intoxication.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-btn" onclick="toggleFaq(this)">
             Is Kit N/A gluten-free?
             <span class="faq-chevron">&#8964;</span>
           </button>
-          <div class="faq-a">Kit N/A is gluten-removed — it's brewed with malted barley and then processed to remove gluten to below 20 ppm (the FDA threshold for gluten-free). It's not certified gluten-free, but most people with gluten sensitivities enjoy it without issue. If you have celiac disease, please consult your doctor.</div>
+          <div class="faq-answer">Kit N/A is gluten-removed — brewed with malted barley then processed to remove gluten below 20 ppm (the FDA threshold for gluten-free). Most people with gluten sensitivities enjoy it without issue. If you have celiac disease, please consult your doctor first.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
-            Where does the flavor come from if there's no alcohol?
-            <span class="faq-chevron">&#8964;</span>
-          </button>
-          <div class="faq-a">Flavor in beer comes from four places: water, malt, hops, and yeast. Kit N/A uses all four — premium hop varieties like Simcoe, Idaho 7, El Dorado, and Amarillo — to create complex, layered flavor profiles that are just as satisfying as any craft beer you've had.</div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-btn" onclick="toggleFaq(this)">
             Can I get Kit N/A shipped to my door?
             <span class="faq-chevron">&#8964;</span>
           </button>
-          <div class="faq-a">Yes! Kit N/A ships nationwide through Amazon. Because it's non-alcoholic, there are no special shipping restrictions. Order a 6-pack of your favorite flavor or grab the Variety 12-Pack to try all three.</div>
+          <div class="faq-answer">Yes! Kit N/A ships nationwide through Amazon. Because it's non-alcoholic, there are no special shipping restrictions. Order a 6-pack of your favorite flavor or grab the Variety 12-Pack to try all three.</div>
         </div>
         <div class="faq-item">
-          <button class="faq-q" onclick="toggleFaq(this)">
+          <button class="faq-btn" onclick="toggleFaq(this)">
             What's in the Variety 12-Pack?
             <span class="faq-chevron">&#8964;</span>
           </button>
-          <div class="faq-a">The Kit N/A Variety 12-Pack includes a mix of all three of our flagship beers: On Your Mark (Blonde Ale), Get Set (Wheat Ale), and Here We Go (Hazy IPA). It's the perfect way to explore the lineup and find your favorite.</div>
+          <div class="faq-answer">The Variety 12-Pack includes 4 cans each of all three flagship beers: On Your Mark (Blonde Ale), Get Set (Golden Ale), and Here We Go (Hazy IPA). It's the perfect way to explore the lineup and find your favorite.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">
+            Who is Kit N/A made for?
+            <span class="faq-chevron">&#8964;</span>
+          </button>
+          <div class="faq-answer">Kit N/A was founded in Maine in 2021 for anyone who loves the taste and social experience of great craft beer, but wants to stay in control. Athletes, parents, designated drivers, sober-curious folks, pregnant people, and anyone who just wants a delicious beer without the downsides.</div>
         </div>
       </div>
     </div>
@@ -1421,19 +1251,19 @@
   <!-- ── Final CTA ──────────────────────────────────────────── -->
   <section class="final-cta">
     <div class="container">
-      <p class="section-label">Ready to Try It?</p>
-      <h2 class="section-title" style="max-width:600px; margin:0 auto 16px;">Your Next Favorite Beer<br />Happens to Have No Alcohol.</h2>
-      <p class="section-sub">Join thousands of people who've discovered that great beer doesn't need a hangover attached to it. Shop Kit N/A on Amazon and get it delivered to your door.</p>
-      <div class="final-cta-buttons">
+      <span class="eyebrow">Ready to Try It?</span>
+      <h2 class="section-title" style="max-width:680px; margin:0 auto 18px;">Your Next Favorite Beer<br />Happens to Have No Alcohol.</h2>
+      <p class="section-sub centered">Join thousands of people who've discovered that great beer doesn't need a hangover attached. Shop Kit N/A on Amazon and get it delivered to your door.</p>
+      <div class="final-cta-btns">
         <a href="https://www.amazon.com/Kit-NA-Brewing-Non-Alcoholic-Variety/dp/B0CRJQRJSM"
            target="_blank" rel="noopener"
-           class="btn btn-gold btn-lg">
-          <svg class="amazon-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
+           class="btn btn-yellow btn-lg">
+          <svg class="amz-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.748.074-1.052-.873-1.24-1.279-1.814-2.113-1.733 1.767-2.96 2.296-5.208 2.296-2.658 0-4.729-1.641-4.729-4.924 0-2.565 1.391-4.309 3.37-5.163 1.716-.754 4.114-.889 5.945-1.096v-.41c0-.753.06-1.642-.384-2.294-.386-.578-1.124-.817-1.78-.817-1.205 0-2.285.619-2.548 1.903-.054.284-.265.564-.545.578l-3.044-.329c-.257-.056-.541-.266-.468-.66C5.93 2.001 9.098 1 11.932 1c1.446 0 3.338.384 4.479 1.478C17.752 3.777 17.62 5.5 17.62 7.366v4.977c0 1.497.62 2.154 1.203 2.962.208.29.253.636-.01.852l-1.669 1.638zM21.087 19.089c-2.214 1.618-5.432 2.477-8.19 2.477-3.877 0-7.364-1.434-9.999-3.82-.207-.188-.022-.445.227-.299 2.844 1.656 6.362 2.653 9.993 2.653 2.452 0 5.146-.508 7.622-1.562.373-.16.687.244.347.551zm.987-1.125c-.283-.363-1.874-.172-2.588-.087-.217.027-.25-.162-.055-.299 1.268-.891 3.347-.634 3.59-.335.243.301-.063 2.385-1.254 3.38-.183.154-.357.071-.275-.128.267-.671.863-2.167.582-2.531z"/></svg>
           Shop Variety 12-Pack on Amazon
         </a>
         <a href="https://www.amazon.com/stores/KitNABrewing/page/51FEB168-4DD1-401D-B93F-731E2540CFE3"
            target="_blank" rel="noopener"
-           class="btn btn-white btn-lg">
+           class="btn btn-outline-white btn-lg">
           Browse All Products →
         </a>
       </div>
@@ -1444,35 +1274,31 @@
   <!-- ── Footer ─────────────────────────────────────────────── -->
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-logo">KIT <span>N/A</span></div>
-      <div class="footer-copy">© 2024 Kit NA Brewing. All rights reserved.</div>
+      <a class="footer-logo" href="#" aria-label="KIT Non-Alc">
+        <img src="https://kit-na-brewing.myshopify.com/cdn/shop/files/Kit_Non_Alc_White.png?v=1732897606&width=200"
+             alt="KIT Non-Alc"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <span style="display:none; font-family:'Oswald',sans-serif; font-size:16px; font-weight:700; color:#fff; text-transform:uppercase; letter-spacing:.1em;">KIT N/A</span>
+      </a>
+      <span class="footer-copy">© 2024 Kit NA Brewing. All rights reserved.</span>
       <a href="https://kit-na.com" target="_blank" rel="noopener" class="footer-link">kit-na.com ↗</a>
     </div>
   </footer>
 
-  <!-- ── JavaScript ─────────────────────────────────────────── -->
   <script>
-    // FAQ toggle
+    // FAQ accordion
     function toggleFaq(btn) {
       const item = btn.closest('.faq-item');
       const isOpen = item.classList.contains('open');
-      // Close all
       document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      // Open clicked (if it was closed)
       if (!isOpen) item.classList.add('open');
     }
 
-    // Scroll animations
+    // Scroll reveal
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
-
 </body>
 </html>
