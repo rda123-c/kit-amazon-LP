@@ -610,6 +610,25 @@
       color: var(--black);
     }
 
+    /* ── Awards ───────────────────────────────────────────── */
+    .awards { background: var(--off-white); }
+    .awards-grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      margin-top: 52px;
+    }
+    .award-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform .25s ease;
+    }
+    .award-item:hover { transform: translateY(-4px) scale(1.05); }
+    .award-item img { width: 160px; height: 160px; object-fit: contain; }
+
     /* ── Testimonials ─────────────────────────────────────── */
     .testimonials { background: var(--blue); }
     .testimonials .eyebrow { color: var(--yellow); }
@@ -1143,6 +1162,28 @@
               <span class="nutrition-value">0g</span>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Awards ─────────────────────────────────────────────── -->
+  <section class="section awards">
+    <div class="container text-center">
+      <span class="eyebrow">Award-Winning</span>
+      <h2 class="section-title">Recognized by the Best in the Industry</h2>
+      <div class="awards-grid">
+        <div class="award-item reveal">
+          <img src="https://kit-na-brewing.myshopify.com/cdn/shop/files/Asset_6.png?v=1700591910&width=400" alt="Award medal 1" loading="lazy" />
+        </div>
+        <div class="award-item reveal">
+          <img src="https://kit-na-brewing.myshopify.com/cdn/shop/files/Asset_7.png?v=1700591910&width=400" alt="Award medal 2" loading="lazy" />
+        </div>
+        <div class="award-item reveal">
+          <img src="https://kit-na-brewing.myshopify.com/cdn/shop/files/Asset_8.png?v=1700591910&width=400" alt="Award medal 3" loading="lazy" />
+        </div>
+        <div class="award-item reveal">
+          <img src="https://kit-na-brewing.myshopify.com/cdn/shop/files/Asset_9.png?v=1700591910&width=400" alt="Award medal 4" loading="lazy" />
         </div>
       </div>
     </div>
